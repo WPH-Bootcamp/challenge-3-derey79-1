@@ -1,1 +1,9 @@
 @import 'tailwindcss';
+
+.card-container {
+  @apply h-72 lg:h-52 p-4 rounded-xl border border-gray-800 flex flex-col gap-5 items-center text-white text-center;
+}
+
+.card-p {
+  @apply text-sm lg:text-base font-normal leading-8 lg:leading-7 text-gray-500;
+}
