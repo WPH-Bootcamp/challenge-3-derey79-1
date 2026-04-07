@@ -51,7 +51,7 @@
         </li>
       </ul>
       <div>
-        <button class="lg:hidden md:hidden block">
+        <button class="buttonToggle md:hidden block cursor-pointer">
           <img src="/assets/icons/hambgr-menu.png" alt="menu" />
         </button>
         <a
@@ -61,6 +61,45 @@
         >
       </div>
     </nav>
+    <div class="mobileMenu hidden">
+      <ul class="pt-20 pb-8 px-6 flex flex-col gap-8">
+        <li>
+          <a
+            class="text-white text-sm hover:text-gray-500 transition duration-300 ease-in-out"
+            href="#hero"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            class="text-white text-sm hover:text-gray-500 transition duration-300 ease-in-out"
+            href="#whoweare"
+            >Service</a
+          >
+        </li>
+        <li>
+          <a
+            class="text-white text-sm hover:text-gray-500 transition duration-300 ease-in-out"
+            href="#ourwork"
+            >Our Work</a
+          >
+        </li>
+        <li>
+          <a
+            class="text-white text-sm hover:text-gray-500 transition duration-300 ease-in-out"
+            href="#team"
+            >Team</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="px-6 w-full">
+      <a
+        class="bg-[#421ABC] px-5 py-2 rounded-full hover:bg-blue-400 text-sm hover:text-gray-500 transition duration-300 ease-in-out"
+        href="#team"
+        >Contact Us</a
+      >
+    </div>
     <!-- ========== HERO SECTION ========== -->
     <main>
       <section
@@ -454,5 +493,12 @@
         </p>
       </div>
     </footer>
+    <script>
+      const buttonToggle = document.querySelector('.buttonToggle');
+      const mobileMenu = document.querySelector('.mobileMenu');
+      buttonToggle.addEventListener('click', function () {
+        mobileMenu.classList.toggle('hidden');
+      });
+    </script>
   </body>
 </html>
