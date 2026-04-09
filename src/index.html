@@ -114,41 +114,38 @@
     <!-- End Mobil Menu -->
     <!-- ========== HERO SECTION ========== -->
     <main>
+      <!-- Hero Section -->
       <section
         id="hero"
-        class="bg-gradient-to-t from-blue-950 to-black mt-20 px-6"
+        class="max-w-[1441px] h-[750px] mx-auto px-6 md:px-20 lg:px-[144px] flex flex-col lg:flex-row items-center relative overflow-hidden bg-gradient-to-t from-blue-950 to-black mt-20 px-6"
       >
-        <!-- container flex -->
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
-          <!-- hero text -->
-          <div class="w-full md:w-1/2 text-center md:text-left lg:px-12">
-            <h1
-              class="text-4xl lg:text-6xl md:text-6xl font-bold text-left text-white"
+        <!-- Left -->
+        <div class="lg:w-1/2 relative z-10 text-center lg:text-left">
+          <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-white">
+            Build with the <span class="italic">Future.</span>
+          </h1>
+          <p class="mt-6 ml-1 text-lg text-left text-gray-600">
+            From building sleek websites and mobile apps to integrating AI
+            solutions, we help brands turn ideas into powerful digital
+            experiences that connect, engage, and scale.
+          </p>
+          <div class="mt-8 justify-center md:justify-start gap-4">
+            <button
+              class="px-8 py-3 rounded-full font-semibold bg-blue-600 text-white hover:bg-gray-300 transition-colors"
             >
-              Build with the <span class="italic">Future.</span>
-            </h1>
-            <p class="mt-6 ml-1 text-lg text-left text-gray-600">
-              From building sleek websites and mobile apps to integrating AI
-              solutions, we help brands turn ideas into powerful digital
-              experiences that connect, engage, and scale.
-            </p>
-            <div class="mt-8 justify-center md:justify-start gap-4">
-              <button
-                class="px-8 py-3 rounded-full font-semibold w-full bg-blue-600 text-white hover:bg-gray-300 transition-colors"
-              >
-                Let's Talk
-              </button>
-            </div>
+              Let's Talk
+            </button>
           </div>
+        </div>
 
-          <!-- hero image -->
-          <div class="w-full">
-            <img
-              src="../assets/images/hero-img-handsphone.png"
-              alt="Hero Image"
-              class="h-800px"
-            />
-          </div>
+        <!-- Right -->
+        <div
+          class="lg:w-1/2 relative lg:absolute right-0 h-full flex justify-center lg:justify-end -right-32 mr-16"
+        >
+          <img
+            src="../assets/images/hero-img-handsphone.png"
+            class="max-h-[700px] lg:h-full object-contain"
+          />
         </div>
       </section>
 
