@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,7 +31,7 @@
         <li>
           <a
             class="text-sm hover:text-gray-500 transition duration-300 ease-in-out"
-            href="#whoweare"
+            href="#whowe"
             >Service</a
           >
         </li>
@@ -56,24 +56,30 @@
         </button>
         <a
           class="md:flex hidden bg-[#421ABC] px-5 py-2 rounded-full hover:bg-blue-400 text-sm hover:text-gray-500 transition duration-300 ease-in-out"
-          href="#team"
+          href="#contact"
           >Contact Us</a
         >
       </div>
     </nav>
-    <div class="mobileMenu hidden">
-      <ul class="pt-20 pb-8 px-6 flex flex-col gap-8">
+    <!-- for Mobile Menu -->
+    <div
+      id="mobileMenu "
+      class="mobileMenu fixed top-20 w-full z-50 bg-black hidden"
+    >
+      <ul class="pb-8 px-6 flex flex-col gap-8">
         <li>
           <a
             class="text-white text-sm hover:text-gray-500 transition duration-300 ease-in-out"
             href="#hero"
+            onclick="closeMenu()"
             >About</a
           >
         </li>
         <li>
           <a
             class="text-white text-sm hover:text-gray-500 transition duration-300 ease-in-out"
-            href="#whoweare"
+            href="#whowe"
+            onclick="closeMenu()"
             >Service</a
           >
         </li>
@@ -81,6 +87,7 @@
           <a
             class="text-white text-sm hover:text-gray-500 transition duration-300 ease-in-out"
             href="#ourwork"
+            onclick="closeMenu()"
             >Our Work</a
           >
         </li>
@@ -88,18 +95,23 @@
           <a
             class="text-white text-sm hover:text-gray-500 transition duration-300 ease-in-out"
             href="#team"
+            onclick="closeMenu()"
             >Team</a
           >
         </li>
       </ul>
+
+      <div class="px-6 pb-10 w-full">
+        <a
+          class="bg-[#421ABC] px-5 py-2 rounded-full hover:bg-blue-400 text-sm hover:text-gray-500 transition duration-300 ease-in-out"
+          href="#contact"
+          onclick="closeMenu()"
+          >Contact Us</a
+        >
+      </div>
     </div>
-    <div class="px-6 w-full">
-      <a
-        class="bg-[#421ABC] px-5 py-2 rounded-full hover:bg-blue-400 text-sm hover:text-gray-500 transition duration-300 ease-in-out"
-        href="#team"
-        >Contact Us</a
-      >
-    </div>
+
+    <!-- End Mobil Menu -->
     <!-- ========== HERO SECTION ========== -->
     <main>
       <section
@@ -107,9 +119,7 @@
         class="bg-gradient-to-t from-blue-950 to-black mt-20 px-6"
       >
         <!-- container flex -->
-        <div
-          class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12"
-        >
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
           <!-- hero text -->
           <div class="w-full md:w-1/2 text-center md:text-left lg:px-12">
             <h1
@@ -151,7 +161,7 @@
           </div>
           <div class="">
             <p
-              class="text-white text-2xl lg:text-3xl text-center px-1.5 lg:px-32"
+              class="text-white text-lg md:text-3xl text-center px-1.5 md:px-32"
             >
               <span class="text-gray-500"
                 >We're a group of tech students trained in</span
@@ -406,7 +416,7 @@
         </div>
       </section>
 
-      <section id="team" class="">
+      <section id="contact" class="">
         <div class="flex justify-center">
           <h2 class="text-white text-2xl lg:text-4xl font-bold py-8">
             Let’s Collaborate
@@ -423,20 +433,15 @@
         <div class="pt-10 px-6 flex flex-col gap-6 items-center justify-center">
           <!-- form here -->
           <div class="max-w-148 w-full mx-auto">
-            <form class="">
-              <div class="sm:col-span-4">
-                <label
-                  for="username"
-                  class="block text-sm/6 font-medium text-white"
+            <form>
+              <div>
+                <label for="username" class="text-sm/6 font-medium text-white"
                   >Name</label
                 >
                 <div class="mt-2">
                   <div
                     class="flex items-center rounded-md pl-3 outline-1 outline-white/10 focus-within:outline-gray-500"
                   >
-                    <div
-                      class="shrink-0 text-base text-gray-400 select-none sm:text-sm/6"
-                    ></div>
                     <input
                       id="name"
                       type="text"
@@ -448,21 +453,16 @@
                 </div>
               </div>
 
-              <!--<div class="sm:col-span-4">
-                <label
-                  for="username"
-                  class="block text-sm/6 font-medium text-white"
+              <div>
+                <label for="username" class="text-sm/6 font-medium text-white"
                   >Email</label
                 >
                 <div class="mt-2">
                   <div
                     class="flex items-center rounded-md pl-3 outline-1 outline-white/10 focus-within:outline-gray-500"
                   >
-                    <div
-                      class="shrink-0 text-base text-gray-400 select-none sm:text-sm/6"
-                    ></div>
                     <input
-                      id="emain"
+                      id="email"
                       type="email"
                       name="email"
                       placeholder="Enter your email"
@@ -470,10 +470,31 @@
                     />
                   </div>
                 </div>
-              </div>-->
+              </div>
+
+              <div>
+                <label for="username" class="text-sm/6 font-medium text-white"
+                  >Message</label
+                >
+                <div class="mt-2">
+                  <div
+                    class="flex items-center rounded-md pl-3 outline-1 outline-white/10 focus-within:outline-gray-500"
+                  >
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="4"
+                      class="block min-w-0 grow bg-transparent py-1.5 pr-3 pl-1 text-base text-white placeholder:text-gray-500 focus:outline-none sm:text-sm/6"
+                      placeholder="Enter your email"
+                    >
+                    </textarea>
+                  </div>
+                </div>
+              </div>
             </form>
           </div>
           <!-- end form -->
+
           <div class="text-white max-w-148 w-full mx-auto">
             <input
               type="submit"
@@ -493,12 +514,18 @@
         </p>
       </div>
     </footer>
+
+    <!-- ========== javaScript ========== -->
     <script>
       const buttonToggle = document.querySelector('.buttonToggle');
       const mobileMenu = document.querySelector('.mobileMenu');
       buttonToggle.addEventListener('click', function () {
         mobileMenu.classList.toggle('hidden');
       });
+
+      function closeMenu() {
+        mobileMenu.classList.toggle('hidden');
+      }
     </script>
   </body>
 </html>
